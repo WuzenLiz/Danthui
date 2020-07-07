@@ -38,6 +38,8 @@
 .side-nav-icon {
     background-color: rgb(255, 255, 255);
     height: calc(33.9375px);
+    align-content: center;
+    display: inline-grid
 }
 
 .side-nav-item {
@@ -173,3 +175,26 @@
     padding-left: 1px;
     padding-right: 1px;
 }
+
+
+/* side ads */
+
+.LeftFloatAds {
+    left: 0px;
+    position: fixed;
+    text-align: center;
+}
+
+.RightFloatAds {
+    right: 0px;
+    position: fixed;
+    text-align: center;
+}
+
+.ads-img {
+    width: 100px;
+    height: 500px;
+}
+
+
+/* some reconfig */
