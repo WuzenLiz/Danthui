@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Giao diện trang website bán hàng</title>
+    <link rel="stylesheet" href="../../../style.css">
+    <link rel="stylesheet" href="../../../carousel_style.css">
+    <style>
+        .carousel-control-prev-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+        }
+        
+        .carousel-control-next-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/9da688b3f5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+</head>
+
+<body style="background-color: #bbbbbb;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between">
+        <a href="TTCS.html" class="navbar-brand" style="color: aliceblue;font-size: 20px;">
+            <i class="fas fa-feather-alt"></i> Trang chủ
+        </a>
+        <div class="wrap">
+            <div class="search">
+                <input type="text" class="searchTerm" placeholder="What are you looking for?">
+                <button type="submit" class="searchButton">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="16px"
+                        id="Layer_1" style="enable-background:new 0 0 16 16;" version="1.1" viewBox="0 0 16 16"
+                        width="16px" xml:space="preserve">
+                        <path
+                            d="M15.7,14.3l-3.105-3.105C13.473,10.024,14,8.576,14,7c0-3.866-3.134-7-7-7S0,3.134,0,7s3.134,7,7,7  c1.576,0,3.024-0.527,4.194-1.405L14.3,15.7c0.184,0.184,0.38,0.3,0.7,0.3c0.553,0,1-0.447,1-1C16,14.781,15.946,14.546,15.7,14.3z   M2,7c0-2.762,2.238-5,5-5s5,2.238,5,5s-2.238,5-5,5S2,9.762,2,7z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item">
+                <a class="nav-link" href="" data-toggle="modal" data-target="#acc-modal"><i class="fas fa-user"> Tài
+                        khoản</i></a>
+            </li>
+            <div class="modal fade" id="acc-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Tài khoản</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="username" class="text-info">Username:</label><br>
+                                <input type="text" name="username" id="username" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="text-info">Password:</label><br>
+                                <input type="text" name="password" id="password" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="remember-me" class="text-info"><span>Remember me</span> <span><input
+                                            id="remember-me" name="remember-me" type="checkbox"></span></label><br>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="submit" name="submit" class="btn btn-info btn-md" value="submit" data-dismiss="modal" data-toggle="modal" data-target="#acc-modal2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="acc-modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Thông báo</h5>
+                        </div>
+                        <div class="modal-body">
+                            <p>
+                                Đăng nhập thành công! Đăng xuất để tiếp tục :>
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Đăng xuất</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <li class="nav-item" style="border: 1px solid #bbbbbb  ;border-radius: 5px; margin-left: 5px;">
+                <a class="nav-link" href="#"><i class="fas fa-shopping-basket"> Giỏ Hàng</i>
+                    <div class="numberCircle">8</div>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="RightFloatAds">
+        <img class="ads-img" src="../../../img/ads.png" alt="side-ads">
+    </div>
+    <div class="LeftFloatAds">
+        <img class="ads-img" src="../../../img/ads.png" alt="side-ads">
+    </div>
+    <div class="container" style="padding-top: 5px;padding-bottom: 20px;">
+
+    </div>
+
+    <div class="jumbotron text-center" style="margin-bottom:0; padding: 2rem 2rem;">
+        <p>2020- Bản quyền của Trường đại học Công Nghệ Thông Tin &amp; Truyền Thông Thái Nguyên</p>
+    </div>
+</body>
+
+
+</html>

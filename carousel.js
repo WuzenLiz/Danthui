@@ -31,13 +31,16 @@ const activateIndicator = (index) => {
     })
 };
 
-const intervalSlider = (direction, delay = 1000) => {
+const intervalSlider = (direction, delay = 2500) => {
     let callback = null,
         getNewIndexFunc = null;
+
     if (direction === 'left') {
         getNewIndexFunc = () => getArrowLeftImageIndex(getCurrentImageIndex());
 
-    } else {
+    } else if (direction === 'right') {
+        getNewIndexFunc = () => getArrowRightImageIndex(getCurrentImageIndex());
+    } else if (direction === '') {
         getNewIndexFunc = () => getArrowRightImageIndex(getCurrentImageIndex());
     }
 
@@ -67,10 +70,12 @@ arrowLeft.addEventListener('click', (e) => {
 arrowRight.addEventListener('click', (e) => {
     const newIndex = getArrowRightImageIndex(getCurrentImageIndex());
     activateIndicator(newIndex);
-
     left && clearInterval(left);
     if (!right) {
         right = rightInterval();
     }
     setAttr(imgCarousel, 'src', images[newIndex]);
+});
+$(function() {
+    $('.arrow-right').trigger("click");
 });
