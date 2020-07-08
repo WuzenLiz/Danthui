@@ -19,8 +19,7 @@
     <script src="https://kit.fontawesome.com/9da688b3f5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
     </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
@@ -29,7 +28,7 @@
 
 <body style="background-color: #bbbbbb;">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between">
-        <a href="TTCS.html" class="navbar-brand" style="color: aliceblue;font-size: 20px;">
+        <a href="../../../TTCS.html" class="navbar-brand" style="color: aliceblue;font-size: 20px;">
             <i class="fas fa-feather-alt"></i> Trang chủ
         </a>
         <div class="wrap">
@@ -110,10 +109,79 @@
         <img class="ads-img" src="../../../img/ads.png" alt="side-ads">
     </div>
     <div class="container" style="padding-top: 5px;padding-bottom: 20px;">
+        <div class="row product-content product-info-head" style=" padding-top: 5px; ">
+            <div class=" col-6 head-slide " style="padding-right: 5px; border-right: 1px #808080 solid;">
+                <div class="w-content">
+                    <img class="Product-thumbnail" src="./img/82054997_p0.png" style="width:100%;">
+                    <img class="Product-thumbnail" src="./img/82699440_p0.jpg" style="width:100%;display:none">
+                    <img class="Product-thumbnail" src="./img/82717454_p0.png" style="width:100%;display:none">
+                </div>
+                <div class="w-row-padding w-section">
+                    <div class="img-mini-thumbnail">
+                        <img class="img-script w-opacity w-hover-opacity-off" src="./img/82054997_p0.png" style="height: 50px;width:50px;cursor:pointer" onclick="currentDiv(1)">
+                    </div>
+                    <div class="img-mini-thumbnail">
+                        <img class="img-script w-opacity w-hover-opacity-off" src="./img/82699440_p0.jpg" style="height: 50px;width:50px;cursor:pointer" onclick="currentDiv(2)">
+                    </div>
+                    <div class="img-mini-thumbnail">
+                        <img class="img-script w-opacity w-hover-opacity-off" src="./img/82717454_p0.png" style="height: 50px;width:50px;cursor:pointer" onclick="currentDiv(3)">
+                    </div>
 
+                </div>
+
+                <script>
+                    function currentDiv(n) {
+                        showDivs(slideIndex = n);
+                    }
+
+
+                    function showDivs(n) {
+                        var i;
+                        var x = document.getElementsByClassName("Product-thumbnail");
+                        var dots = document.getElementsByClassName("img-script");
+                        if (n > x.length) {
+                            slideIndex = 1
+                        }
+                        if (n < 1) {
+                            slideIndex = x.length
+                        }
+                        for (i = 0; i < x.length; i++) {
+                            x[i].style.display = "none";
+                        }
+                        for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" w-opacity-off", "");
+                        }
+                        x[slideIndex - 1].style.display = "block";
+                        x[slideIndex - 1];
+                        dots[slideIndex - 1].className += " w-opacity-off";
+                    }
+                </script>
+
+            </div>
+            <div class=" col-6 head-function " style="padding-left: 25px;padding-right: 25px;">
+                <div class="row header" style=" border-bottom: 1px #808080 solid;display: block;">
+                    <h1 class="title deal">GÁIIIIIIIIIIIIII</h1>
+                    <div style="display:flex">
+                        <p class="description">Đã bán: 1000000 sản phẩm</p>
+                        <p class="description">Thương hiệu: UwU</p>
+                    </div>
+                </div>
+                <div class="row header" style="display: block; border-bottom: 1px #808080 solid;">
+                    <h1 class="price">Giá bán:
+                        <p style="color: red;padding-left: 5px;">5000000 VNĐ</p>
+                    </h1>
+                    <Button type="button" class="btn btn-primary btn-lg">
+                        <i class="fas fa-shopping-basket"> Mua ngay</i>
+                    </Button>
+                </div>
+                <div class="row header" style="display: block; ">
+                    <h2>Thông tin sản phẩm:</h2>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="jumbotron text-center" style="margin-bottom:0; padding: 2rem 2rem;">
+    <div class=" jumbotron text-center " style=" margin-bottom:0; padding: 2rem 2rem; ">
         <p>2020- Bản quyền của Trường đại học Công Nghệ Thông Tin &amp; Truyền Thông Thái Nguyên</p>
     </div>
 </body>

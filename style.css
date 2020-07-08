@@ -105,6 +105,16 @@
     vertical-align: center;
 }
 
+.head-function>.header {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding-top: 5px;
+    padding-left: 16px;
+    padding-bottom: 5px;
+    vertical-align: center;
+}
+
 .product-info {
     display: flex;
     flex-wrap: wrap;
@@ -114,6 +124,10 @@
 
 .product-conten>.header .title.deal {
     color: rgb(255, 61, 0);
+}
+
+.price {
+    display: flex;
 }
 
 .product-conten>.header .title {
@@ -126,6 +140,47 @@
     width: -webkit-fill-available;
     border-top: 1px solid rgb(225, 225, 225);
     height: auto;
+}
+
+.w-content {
+    max-width: 250px;
+    max-height: 500px;
+    display: inline;
+}
+
+.w-row-padding,
+.w-row-padding>.w-half,
+.w-row-padding>.w-third,
+.w-row-padding>.w-twothird,
+.w-row-padding>.w-threequarter,
+.w-row-padding>.w-quarter,
+.w-row-padding>.w-col {
+    padding: 0 8px
+}
+
+.w-section {
+    margin-top: 16px !important;
+    margin-bottom: 16px !important
+}
+
+.w-opacity,
+.w-hover-opacity:hover {
+    opacity: 0.60
+}
+
+.w-opacity-off,
+.w-hover-opacity-off:hover {
+    opacity: 1
+}
+
+.img-mini-thumbnail {
+    width: auto;
+    height: auto;
+    display: inline-flex;
+}
+
+.description {
+    margin-left: 5%;
 }
 
 
@@ -201,6 +256,3 @@
     width: 100px;
     height: 500px;
 }
-
-
-/* some reconfig */
